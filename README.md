@@ -1,18 +1,39 @@
-## Getting Started
+# Modello ToDo Homework
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Un progetto Java per la gestione di attività e liste di cose da fare (ToDo). Questo programma è attualmente in una fase embrionale e serve come modello per un'applicazione di gestione delle attività.
 
-## Folder Structure
+## Struttura del Progetto
 
-The workspace contains two folders by default, where:
+Il progetto è composto dai seguenti componenti principali:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Utente**: Rappresenta un utente con un'email, una password e un array di bacheche.
+- **Bacheca**: Contiene una lista di ToDo, un titolo, una descrizione e un ordinamento.
+- **ToDo**: Rappresenta un'attività con titolo, descrizione, scadenza, stato di completamento e una checklist opzionale.
+- **Checklist**: Una lista di attività (oggetti `Attività`) da completare.
+- **Attività**: Rappresenta una singola attività con un nome e uno stato di completamento.
+- **Titolo**: Enum che definisce i tipi di bacheche (Università, Tempo Libero, Lavoro).
+- **Ordinamento**: Enum che definisce i criteri di ordinamento per i ToDo.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Funzionalità
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Creazione di attività (`Attività`) e checklist (`Checklist`).
+- Creazione di ToDo con dettagli come titolo, descrizione, scadenza e checklist.
+- Organizzazione dei ToDo in bacheche (`Bacheca`) con ordinamenti personalizzati.
+- Gestione degli utenti con bacheche personali.
 
-## Dependency Management
+## Esempio di Utilizzo
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Il file `Programma.java` contiene un esempio di utilizzo del progetto:
+
+1. Creazione di attività e checklist.
+2. Creazione di ToDo e aggiunta a una bacheca.
+3. Creazione di un utente con bacheche.
+4. Stampa di un'attività partendo dall'utente.
+
+Esempio di output:
+Attività: comprare il latte
+
+## Prossimi Passi
+
+1. un check per verificare se è una email
+2. metodo di crypt per la password
