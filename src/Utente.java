@@ -2,6 +2,7 @@ public class Utente {
     private String email;
     private String password;
     private Bacheca bacheche[] = new Bacheca[3]; // array di bacheche
+    
 
     // costruttore
 

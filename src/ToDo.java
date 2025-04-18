@@ -1,5 +1,3 @@
-
-import java.util.ArrayList;
 import java.util.Calendar;
 public class ToDo {
     private String titolo;
@@ -10,15 +8,14 @@ public class ToDo {
     private boolean completato = false;
     private boolean manuale = false;
     private boolean scaduto = false;
-    private ArrayList<Utente> condivisoCon = new ArrayList<>();
     private String sfondo;
     private String immagine;
     private Checklist checklist;
 
 
-    // costruttore
+    // costruttore completo
     public ToDo(String titolo, String descrizione, String link, Calendar scadenza, boolean completato,
-            boolean manuale, boolean scaduto, ArrayList<Utente> condivisoCon, String sfondo, String immagine,
+            boolean manuale, boolean scaduto, String sfondo, String immagine,
             Checklist checklist) {
         this.titolo = titolo;
         this.descrizione = descrizione;
@@ -28,25 +25,21 @@ public class ToDo {
         this.completato = completato;
         this.manuale = manuale;
         this.scaduto = scaduto;
-        this.condivisoCon = condivisoCon;
         this.sfondo = sfondo;
         this.immagine = immagine;
         this.checklist = checklist;
     }
 
-    public ToDo(String titolo, String descrizione, String link, Calendar scadenza, boolean completato,
-            boolean manuale, boolean scaduto, ArrayList<Utente> condivisoCon, String sfondo, String immagine) {
+    // costruttore senza elementi null
+    public ToDo(String titolo, String descrizione, Calendar scadenza, boolean completato,
+            boolean manuale, boolean scaduto) {
         this.titolo = titolo;
         this.descrizione = descrizione;
-        this.link = link;
         this.scadenza = scadenza;
         this.creazione = Calendar.getInstance(); // data di creazione impostata alla data corrente
         this.completato = completato;
         this.manuale = manuale;
         this.scaduto = scaduto;
-        this.condivisoCon = condivisoCon;
-        this.sfondo = sfondo;
-        this.immagine = immagine;
     }
 
     // getters e setters
@@ -128,17 +121,6 @@ public class ToDo {
     public void setScaduto(boolean scaduto) {
         this.scaduto = scaduto;
     }
-
-
-    public ArrayList<Utente> getCondivisoCon() {
-        return condivisoCon;
-    }
-
-
-    public void setCondivisoCon(ArrayList<Utente> condivisoCon) {
-        this.condivisoCon = condivisoCon;
-    }
-
 
     public String getSfondo() {
         return sfondo;
